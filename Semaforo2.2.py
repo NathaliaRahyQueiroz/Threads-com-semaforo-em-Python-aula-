@@ -22,23 +22,26 @@ def decolar(pista, aviao):
     global semaforo_sul
     global semaforo_decolagem
 
-    with semaforo_decolagem:
 
-        if pista ==0:
-            with semaforo_norte:
+    if pista ==0:
+        with semaforo_norte:
+            with semaforo_decolagem:
                 manobrar(pista, aviao)
                 taxiar(pista, aviao)
                 decolagem(pista, aviao)
                 afastamento (pista, aviao)
+                print ('O avião', aviao, 'decolou da pista', pista)
 
                 
 
-        else:
-            with semaforo_sul:
+    else:
+        with semaforo_sul:
+            with semaforo_decolagem:
                 manobrar(pista, aviao)
                 taxiar(pista, aviao)
                 decolagem(pista, aviao)
                 afastamento (pista, aviao)
+                print ('O avião', aviao, 'decolou da pista', pista)
 
                 
 
